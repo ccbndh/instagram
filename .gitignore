@@ -1,0 +1,29 @@
+# Python django
+*.pyc
+__pycache__
+db.sqlite3
+
+# Node
+node_modules
+bower_components/
+node_modules/
+.grunt
+
+venv
+
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+
+#IDE
+.DS_Store
+.idea
+*~
+
+
+# Logs
+*.log
+

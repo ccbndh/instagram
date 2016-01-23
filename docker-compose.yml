@@ -1,0 +1,17 @@
+postgres:
+  image: postgres:9.4
+  ports:
+    - "5432:5432"
+
+web:
+  build: .
+  #image: ccbndh/instagram:0.1
+  ports:
+    - "8000:8000"
+  links:
+    - postgres
+  env_file:
+    - ./env_dev
+  volumes:
+    - ./:/srv/instagram
+  #entrypoint: tail -f
