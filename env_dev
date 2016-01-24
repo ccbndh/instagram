@@ -1,5 +1,4 @@
-# common
-DB_NAME=instagram
-DB_USER=instagram
-DB_PWD=instagram
-DB_HOST=192.168.99.100
+POSTGRES_USER=instagram
+POSTGRES_PASSWORD=instagram
+POSTGRES_DB=instagram
+POSTGRES_HOST=db

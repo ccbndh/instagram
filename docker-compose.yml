@@ -1,17 +1,16 @@
-postgres:
-  image: postgres:9.4
-  ports:
-    - "5432:5432"
+db:
+  image: postgres
+  env_file:
+    - ./env_dev
 
 web:
   build: .
-  #image: ccbndh/instagram:0.1
+  command: bash -c "sleep 7 && python manage.py migrate && python manage.py runserver 0.0.0.0:8000" # waiting for psql init completed db in first time
+  volumes:
+    - .:/code
   ports:
     - "8000:8000"
   links:
-    - postgres
+    - db
   env_file:
     - ./env_dev
-  volumes:
-    - ./:/srv/instagram
-  #entrypoint: tail -f
