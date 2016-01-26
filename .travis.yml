@@ -12,3 +12,5 @@ script:
   - docker-compose -v
   - docker-compose up -d
   - docker-compose run web python manage.py test
+  - coverage run --source=home manage.py test home
+after_success: coveralls
