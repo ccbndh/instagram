@@ -8,3 +8,4 @@ before_install:
 
 script:
   - docker-compose run web python manage.py test
+
