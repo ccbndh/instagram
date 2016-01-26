@@ -13,5 +13,4 @@ test:
   pre:
     - docker-compose up -d
   override:
-    - docker-compose run grunt deploy-build compile
     - docker-compose run web python manage.py test
