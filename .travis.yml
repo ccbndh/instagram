@@ -10,5 +10,5 @@ install:
 script:
   - docker -v
   - docker-compose -v
-  - docker-compose build --no-cache
+  - docker-compose up -d
   - docker-compose run web python manage.py test
