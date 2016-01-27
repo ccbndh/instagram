@@ -17,4 +17,4 @@ class PhotoTestCase(TestCase):
         """User ccbndh should have 2 photo uploaded"""
 
         photo_of_user_ccbn = Photo.objects.filter(user__username='ccbndh')
-        self.assertEqual(photo_of_user_ccbn.count(), 3)
+        self.assertEqual(photo_of_user_ccbn.count(), 2)
